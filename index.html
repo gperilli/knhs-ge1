@@ -65,7 +65,22 @@ opacity: 1;
 }
 
 .border {
-border: 0px solid #eee;
+border: 1px solid #eee;
+}
+
+.langbtns {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.lbtnhlghtd {
+	font-weight: bold;
+   
+    cursor: normal;
+    border-bottom: 1px solid #000;
+    color: blue;
 }
 	
 .pstrborder {
@@ -132,7 +147,7 @@ padding: 0px;
 	  
 		<div class="border" style="position: relative; width: 100%; float: left; display: inline-block;">
 			
-			<div style="position: relative; float: left; display: inline-block; width: 100%;" align="center">
+			<div style="position: relative; float: left; display: inline-block; width: 100%; margin-bottom: 10px;" align="center">
 				<div class="sociallnksL border" style="padding-top: 0px; position: relative; margin-right: 10px; width: 50px; height: 50px;">
 					<a class="border" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; " href="https://classi.jp" rel="external">
 						<img style="display: block; float; left; position: relative; width: 100%; width: 50px; height: 50px;" src="Classilogo.png" />
@@ -158,9 +173,12 @@ padding: 0px;
 		
 		<div style="padding-left: 20px;">
 			<div style="position: relative; float: left; width: 100%;" class="border">
-				<h1 style="font-weight: bold; margin: 0px;">Kochi Nishi High School - Global Education 1</h1>
+				<h1 id="ge1crsetitle" style="font-weight: bold; margin: 0px;">Kochi Nishi High School - Global Education 1</h1>
                 <h2 style="font-weight: bold; margin: 0px; float: left; width: 100%; text-align: right;">2020-2021</h2>
                 <h3 style="font-weight: bold; margin: 0px; float: left; width: 100%; text-align: right;">G. S. Perilli</h3>
+				
+				<p id="LSelENG" class="langbtns lbtnhlghtd" onclick="LSel('ENG')">English</p>
+				<p id="LSelJPN" class="langbtns" onclick="LSel('JPN')">日本語</p>
 			</div>
 			<br>
 		
@@ -189,7 +207,7 @@ padding: 0px;
 		<div style="padding-left: 20px;">
 		
 		<div style="position: relative; float: left; width: 100%; padding: 0px; margin-bottom: 15px; border: 0px solid black;" class="border">
-			<h3 style="font-weight: bold; display: inline-block; clear: left; margin: 0px; ">Fast Fashion Infographics</h3><br>
+			<h3 id="infogttle" style="font-weight: bold; display: inline-block; clear: left; margin: 0px; ">Fast Fashion Infographics</h3><br>
 		
 			<a class="pstrborder" style="" href="InfoGraphic0.png" download target="_blank">
 				<img src="InfoGraphic0.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
@@ -251,7 +269,7 @@ padding: 0px;
 		
 			
            	<div style="position: relative; float: left; width: 100%; padding: 0px;" class="border">
-			<h3 style="font-weight: bold; display: inline-block; clear: left; margin: 0px; ">Units</h3><br>
+			<h3 id="unithdr" style="font-weight: bold; display: inline-block; clear: left; margin: 0px; ">Units</h3><br>
             
 			
 
@@ -259,7 +277,7 @@ padding: 0px;
                     	<a class="border" style="" href="GE1-Clothing.pdf" download target="_blank">
 				<img src="unitcvr-clothing.png" class="pdfcvrs" style="float: left;  margin-right: 10px; ">
 			</a>		
-					<b>Clothing &#38; Globalization</b><br>
+					<b id="UntClothingTtle">Clothing &#38; Globalization</b><br>
 
 					- Where do our clothes come from?<br>
 					- Who makes our clothes?<br>
@@ -282,7 +300,7 @@ padding: 0px;
                     	<a class="border" href="GE1-Poverty.pdf" download target="_blank">
 				<img src="unitcvr-poverty.png" class="pdfcvrs" style="float: left;  margin-right: 10px; ">
     			</a>
-					<b>Poverty &#38; Inequality</b><br>
+					<b id="UntPovertyTtle">Poverty &#38; Inequality</b><br>
 					
 					- What do we know about poverty?<br>
 					- What causes poverty?<br>
@@ -303,7 +321,7 @@ padding: 0px;
                     	<a class="border" href="GE1-Music.pdf" download target="_blank">
 				<img src="unitcvr-music.png" class="pdfcvrs" style="float: left;  margin-right: 10px; ">
     			</a>
-					<b>Music &#38; Diversity</b><br>
+					<b id="UntMusicTtle">Music &#38; Diversity</b><br>
 					
 					- What types of music are there?<br>
 					- How do we categorize genre?<br>
@@ -327,7 +345,7 @@ padding: 0px;
                     	<a class="border" style="" href="GE1-Food.pdf" download target="_blank">
 				<img src="unitcvr-food.png" class="pdfcvrs" style="float: left;  margin-right: 10px; ">
     			</a>
-			<b>Food &#38; Environmentalism</b><br>
+			<b id="UntFoodTtle">Food &#38; Environmentalism</b><br>
 
 			- Where does our food come from?<br>
 			- What is foreign food?<br>
@@ -390,3 +408,59 @@ padding: 0px;
 </body>
 
 </html>
+
+<script>
+	PgeTxt = {
+	ENG: {ge1crsetitle: "Kochi Nishi High School - Global Education 1", infogttle: "Fast Fashion Infographics", unithdr: "Units",
+		//Cothing Unit Text
+		UntClothingTtle: "Clothing &#38; Globalization", 
+		
+		//Poverty Unit Text
+		UntPovertyTtle: "Poverty &#38; Inequality", 
+		
+		//Music Unit Text
+		UntMusicTtle: "Music &#38; Diversity", 
+		
+		//Food Unit Text
+		UntFoodTtle: "Food &#38; Environmentalism", 
+		
+		},
+
+	JPN: {ge1crsetitle: "高知西高校 - Global Education 1", infogttle: "ファーストファション インフォグラフィック", unithdr: "単元",
+		//Clothing Unit Text
+		UntClothingTtle: "衣服とグローバル化", 
+		
+		//Poverty Unit Text
+		UntPovertyTtle: "貧困と不平等", 
+		
+		//Music Unit Text
+		UntMusicTtle: "音楽と多様性", 
+		
+		//Food Unit Text
+		UntFoodTtle: "食べ物と環境", 
+		},
+	}
+
+
+
+
+
+function LSel(L1) {
+	//alert("LSel".concat(L1));
+	document.getElementById("LSelENG").className = "langbtns";
+	document.getElementById("LSelJPN").className = "langbtns";
+
+	document.getElementById("LSel".concat(L1)).className += " lbtnhlghtd";
+	//sitetext
+	document.getElementById("ge1crsetitle").innerHTML = PgeTxt[L1]["ge1crsetitle"];
+	document.getElementById("infogttle").innerHTML = PgeTxt[L1]["infogttle"];
+	document.getElementById("unithdr").innerHTML = PgeTxt[L1]["unithdr"];
+	document.getElementById("UntClothingTtle").innerHTML = PgeTxt[L1]["UntClothingTtle"];
+	document.getElementById("UntPovertyTtle").innerHTML = PgeTxt[L1]["UntPovertyTtle"];
+	document.getElementById("UntMusicTtle").innerHTML = PgeTxt[L1]["UntMusicTtle"];
+	document.getElementById("UntFoodTtle").innerHTML = PgeTxt[L1]["UntFoodTtle"];
+	//header and footer
+	
+}
+</script>
+
