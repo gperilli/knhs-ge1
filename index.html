@@ -57,7 +57,7 @@ opacity: 1;
 }
 	
 .pstrcvrs {
-    width: 21%;
+  
    margin: 5px;
 	display: inline;
 	border: 0px solid green;
@@ -87,6 +87,75 @@ border: 0px solid #eee;
 	border: 0px solid #eee;
 padding: 0px;	
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  padding-left: 0px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  
+  .row {
+  padding-left: 0px;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+	padding-left: 0px;
+  }
+  
+  .row {
+  padding-left: 0px;
+  }
+  
+  .pstrcvrs {
+  margin-left: 0px;
+  }
 
 /* Responsiveness */
 @media (max-width: 1024px) {
@@ -122,7 +191,7 @@ padding: 0px;
 }
 	
 .pstrcvrs {
-    width: 40%;
+  
 	display: inline-block;
 	margin-bottom: 15px;
 	
@@ -209,63 +278,57 @@ padding: 0px;
 		<div style="position: relative; float: left; width: 100%; padding: 0px; margin-bottom: 15px; border: 0px solid black;" class="border">
 			<h3 id="infogttle" style="font-weight: bold; display: inline-block; clear: left; margin: 0px; ">Fast Fashion Infographics</h3><br>
 		
-			<a class="pstrborder" style="" href="InfoGraphic0.png" download target="_blank">
-				<img src="InfoGraphic0.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
-			</a>
+		
+		
+		<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">  
+	<a style="" href="InfoGraphic1.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic1.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic13.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic13.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic12.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic12.png" style="width:100%">
+    </a>
+  </div>
+  <div class="column">
+	<a style="" href="InfoGraphic5.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic5.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic6.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic6.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic7.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic7.png" style="width:100%">
+	</a>
+  </div>  
+  <div class="column">
+	<a style="" href="InfoGraphic8.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic8.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic9.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic9.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic10.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic10.png" style="width:100%">
+	</a>
+  </div>
+  <div class="column">
+	<a style="" href="InfoGraphic11.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic11.png" style="width:100%">
+	</a>
+	<a style="" href="InfoGraphic4.png" download target="_blank">
+		<img class="pstrcvrs" src="https://gperilli.github.io/knhs-ge1/InfoGraphic4.png" style="width:100%">
+	</a>
+  </div>
+</div>
+		
+		
+		
+		
 			
-			<a class="pstrborder" style="" href="InfoGraphic1.png" download target="_blank">
-				<img src="InfoGraphic1.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
-			</a>
-					
-			<a class="pstrborder" style="" href="InfoGraphic4.png" download target="_blank">
-				<img src="InfoGraphic4.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic6.png" download target="_blank">
-				<img src="InfoGraphic6.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic9.png" download target="_blank">
-				<img src="InfoGraphic9.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px; ">
-			</a>
-			
-		</div>
-			
-		<div style="position: relative; float: left; width: 100%; padding: 0px; margin-bottom: 15px;" class="border">
-			
-			<a class="pstrborder" style="" href="InfoGraphic2.png" download target="_blank">
-				<img src="InfoGraphic2.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-				
-			<a class="pstrborder" style="" href="InfoGraphic5.png" download target="_blank">
-				<img src="InfoGraphic5.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic7.png" download target="_blank">
-				<img src="InfoGraphic7.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic8.png" download target="_blank">
-				<img src="InfoGraphic8.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic10.png" download target="_blank">
-				<img src="InfoGraphic10.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic11.png" download target="_blank">
-				<img src="InfoGraphic11.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic12.png" download target="_blank">
-				<img src="InfoGraphic12.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-			
-			<a class="pstrborder" style="" href="InfoGraphic13.png" download target="_blank">
-				<img src="InfoGraphic13.png" class="pstrcvrs" style="position: relative; float: left; padding: 5px;">
-			</a>
-		</div>
 		
 			
            	<div style="position: relative; float: left; width: 100%; padding: 0px;" class="border">
