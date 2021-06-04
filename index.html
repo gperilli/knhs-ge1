@@ -1,409 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>fullPage.js Testing</title>
+  <title>GE1</title>
   <meta name="description" content="A Simple Full Page Scroll">
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <style>
+  <link rel="stylesheet" href="knhsge1.css" />
 
-  .flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: transparent;
-  width: 100%;
-  outline: 0px solid #000;
-}
-
-.flex-container > div {
-  background-color: #fff;
-    width: 20%;
-  margin: 20px;
-  text-align: center;
-
-}
-
-.flex-containerB {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: transparent;
-  width: 100%;
-  outline: 0px solid #000;
-  flex-direction: row;
-}
-
-.flex-containerB > div {
-  background-color: #fff;
-    width: 20%;
-  margin: 10px;
-  text-align: left
-
-
-}
-
-  section {
-    overflow: hidden;
-    left: 0px;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-    float: left;
-    position: absolute;
-
-    outline: #000 solid 0px;
-    outline-offset: -1px;
-  }
-
-
-
-
-  #sec1 {
-    background: #ccb3ff;
-  }
-  #pdfcvr-cnt1R {
-    background: #ccb3ff;
-  }
-  #pdficnlnk1R {
-    background: #ccb3ff;
-  }
-  #sechdr1 {
-    background: #ccb3ff;
-    top: 100%;
-    border: 1px solid #ccb3ff;
-  }
-
-
-
-  #sec2 {
-  background: #f0b3ff;
-  }
-  #pdfcvr-cnt2 {
-    background: #f0b3ff;
-  }
-  #pdficnlnk2 {
-    background: #f0b3ff;
-  }
-  #sechdr2 {
-    background: #f0b3ff;
-    top: 225%;
-    border: 1px solid #f0b3ff;
-  }
-
-
-  #sec3 {
-  background: #ffb3b3;
-  }
-  #pdfcvr-cnt3R {
-    background: #ffb3b3;
-  }
-  #pdficnlnk3R {
-    background: #ffb3b3;
-  }
-  #sechdr3 {
-    background: #ffb3b3;
-    top: 350%;
-    border: 1px solid #ffb3b3;
-  }
-
-  #sec4 {
-  background: #c6ecd9;
-  }
-  #pdfcvr-cnt4 {
-    background: #c6ecd9;
-  }
-  #pdficnlnk4 {
-    background: #c6ecd9;
-  }
-  #sechdr4 {
-    background: #c6ecd9;
-    top: 475%;
-    border: 1px solid #c6ecd9;
-  }
-
-  #webdevercnt {
-    position: absolute;
-    width: 100%;
-    top: 600%;
-    height: 25%;
-  }
-.sechdr {
-  position: absolute;
-  float: left;
-  margin-left: 0px;
-  left: 0%;
-  width: 100%;
-  height:25%;
-
-  }
-
-.pdfcvr-cnt {
-height: 100%;
-width: 50%;
-float: left;
-margin-top: 0%;
-background: #fff;
-z-index: 99;
-margin-right: -50%;
-
-}
-
-.pdfcvr-cntR {
-  height: 100%;
-  width: 50%;
-  float: right;
-  margin-top: 0%;
-  background: #fff;
-  z-index: 99;
-  margin-right: 0%;
-  }
-
-.pdfcvr-rtdprt {
-  position: relative;
-  -ms-transform: rotate(12deg); /* IE 9 */
-  transform: rotate(12deg);
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-}
-
-.pdfcvr-rtdprtR {
-  position: relative;
-  -ms-transform: rotate(-12deg); /* IE 9 */
-  transform: rotate(-12deg);
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-}
-
-.pdficnlnkcnt {
-  position: absolute;
-  width: 50%;
-  height: 20%;
-  left: 50%;
-  top: 79%;
-  background: transparent;
-  z-index: 10;
-}
-
-.pdficnlnkcntR {
-  position: absolute;
-  width: 50%;
-  height: 20%;
-  left: 0%;
-  top: 79%;
-  background: transparent;
-  z-index: 10;
-}
-
-.unttxtcnt {
-  position: absolute;
-  display: ;
-  width: 47.5%;
-
-  left: 50%;
-  top: 15%;
-  background: #fff;
-  z-index: 99;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.unttxtcntR {
-  position: absolute;
-  display: ;
-  width: 50%;
-
-  left: 2.5%;
-  top: 15%;
-  background: #fff;
-  z-index: 99;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.pdficnlnk {
-  position: relative;
-  background: #fff;
-  height: 100%;
-  width: 10%;
-  padding-right: 5%;
-  float: right;
-  z-index: 50;
-}
-
-.pdficnlnkR {
-  position: relative;
-  background: #fff;
-  height: 100%;
-  width: 10%;
-  padding-left: 5%;
-  float: left;
-  z-index: 50;
-}
-
-body {
-  font-size: 100%;
-  font-family: 'Courier New', monospace;
-}
-
-h1 {
-  font-size: 2em;
-margin-left: 10px;
-}
-
-h2 {
-  font-size: 1em;
-  margin-left: 0.5em;
-}
-
-.unttxtpnts {
-  display: block;
-}
-
-span {
-  margin-left: 0.5em;
-}
-
-img.galimg {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-img.pdfcvrimg {
-  height: 100%;
-  float: right;
-  margin-right: 0px;
-  z-index: 99;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  opacity: 0.5;
-}
-
-img.pdficnlnkimg {
-  margin: 0px;
-  float: right;
-  height: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-img.pdficnlnkimgR {
-  margin: 0px;
-  float: left;
-  height: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-@media (max-width: 351px) {
-    div.pdfcvr-rtdprt {
-      height: 100%;
-      margin-left: 50%;
-    }
-
-    div.pdfcvr-rtdprtR {
-      height: 100%;
-      margin-left: 50%;
-    }
-
-    .unttxtcnt {
-      display: none;
-    }
-
-    .unttxtcntR {
-      display: none;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .pdfcvr-cntR {
-      margin-right: -30%;
-    }
-
-  }
-
-    @media (max-height: 500px) {
-      .pdfcvr-rtdprt {
-        left: -50%;
-        background-color: transparent;
-      }
-
-      .pdfcvr-rtdprtR {
-        left: -100%;
-        background-color: transparent;
-      }
-
-      .unttxtcnt {
-        display: block;
-      }
-
-      .unttxtcntR {
-        display: block;
-      }
-
-      .unttxtpnts {
-        display: none;
-      }
-
-  }
-
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 1.5em;
-      margin-left: 0.5em;
-    }
-    .unttxtcnt {
-      width: 70%;
-      left: 20%;
-    }
-
-    .unttxtcntR {
-      width: 70%;
-      left: 20%;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .pdfcvr-cntR {
-      margin-right: -50%;
-    }
-  }
-
-  @media (max-height: 550px) {
-    #gepntscnt {
-      display: none;
-    }
-  }
-
-  @media (max-width: 800px) {
-  .flex-containerB {
-    flex-direction: column;
-  }
-  .flex-container > div {
-    background-color: #fff;
-      width: 15%;
-    margin: 20px;
-  }
-}
-
-
-
-  </style>
 </head>
 
-  <body id="body" onload="glbxsz()" onresize="glbxsz()">
+  <body id="body">
 
+      <section id="sec0" style="position: relative; float: left; margin-left: 0px;">
+        <h1 id="ge1crsetitle">Kochi Nishi High School - Global Education 1</h1>
+        <h1>2019-2020</h1>
 
-      <section id="sec0" style="">
-        <h1 id="">Kochi Nishi High School - Global Education 1 2019-2020</h1>
-
+        <h4 id="LSelENG" class="langbtns lbtnhlghtd" onclick="LSel('ENG')">English</h4>
+				<h4 id="LSelJPN" class="langbtns" onclick="LSel('JPN')">日本語</h4>
         <div id="galcnt1">
-        <h2 id="">Fast Fashion Infographics</h2>
-        <div class="flex-container">
-          <div><img class="galimg" src="graphics/InfoGraphic1.png" style="width: 100%; vertical-align: bottom;"></div>
-          <div><img class="galimg" src="graphics/InfoGraphic4.png" style="width: 100%; vertical-align: bottom;"></div>
-          <div><img class="galimg" src="graphics/InfoGraphic6.png" style="width: 100%; vertical-align: bottom;"></div>
-          <div><img class="galimg" src="graphics/InfoGraphic9.png" style="width: 100%; vertical-align: bottom;"></div>
-          <div><img class="galimg" src="graphics/InfoGraphic0.png" style="width: 100%; vertical-align: bottom;"></div>
-        </div>
+          <h2 id="infogttle">Fast Fashion Infographics</h2>
+          <div class="flex-container">
+            <div><img class="galimg" src="graphics/InfoGraphic1.png" style="width: 100%; vertical-align: bottom;"></div>
+            <div><img class="galimg" src="graphics/InfoGraphic4.png" style="width: 100%; vertical-align: bottom;"></div>
+            <div><img class="galimg" src="graphics/InfoGraphic6.png" style="width: 100%; vertical-align: bottom;"></div>
+            <div><img class="galimg" src="graphics/InfoGraphic9.png" style="width: 100%; vertical-align: bottom;"></div>
+            <div><img class="galimg" src="graphics/InfoGraphic0.png" style="width: 100%; vertical-align: bottom;"></div>
+          </div>
         </div>
 <br>
           <div id="gepntscnt" class="flex-containerB">
@@ -412,26 +34,23 @@ img.pdficnlnkimgR {
             <h4 id="" style="float: left; margin-left: 10px; margin-bottom: 0px;">- development</h4>
             <h4 id="" style="float: left; margin-left: 10px; margin-bottom: 0px;">- global issues</h4>
             <h4 id="" style="float: left; margin-left: 10px; margin-bottom: 0px;">- human rights</h4>
-
           </div>
 
       </section>
-<!-- Unit 1 -->
-      <div class="sechdr" id="sechdr1" style=""></div>
-      <p style="position: absolute; top: 115%;">Clothing &#38; Globalization</p>
-      <section id="sec1" style="top: 125%;">
 
-        <div id="pdfcvr-cnt1R" class="pdfcvr-cntR" style="" data-aos="fade-left">
+      <!-- Unit 1 -->
+      <div class="sechdr" id="sechdr1" style=""><p style="">Unit 4: Clothing &#38; Globalization</p></div>
+
+      <section id="sec1" style="">
+        <div id="pdfcvr-cnt1R" class="pdfcvr-cntR" style="z-index: 59;" data-aos="fade-left">
             <div class="pdfcvr-rtdprtR">
-              <a class="border" style="" href="GE1-Clothing.pdf">
-                  <img src="graphics/unitcvr-clothing.png" class="pdfcvrimg" style="">
+                  <img src="graphics/unitcvr-clothing.png" class="pdfcvrimg" style="z-index: 59;">
               </a>
             </div>
         </div>
 
         <div class="unttxtcntR" data-aos="fade-right">
               <h1 id="UntClothingTtle">Clothing &#38; Globalization</h1>
-
               <h2 class="unttxtpnts" id="UntClothingQ1">- Where do our clothes come from?</h2>
     					<h2 class="unttxtpnts" id="UntClothingQ2">- Who makes our clothes?</h2>
     					<h2 class="unttxtpnts" id="UntClothingQ3">- What are the working conditions of clothing industry factory workers in bangladesh?</h2>
@@ -439,123 +58,111 @@ img.pdficnlnkimgR {
     					<h2 class="unttxtpnts" id="UntClothingQ5">- How much clothing do we waste?</h2>
         </div>
 
-        <div class="pdficnlnkcntR" >
-          <div id="pdficnlnk1R" class="pdficnlnkR" style="">
-            <img src="graphics/unitcvr-clothing.png" class="pdficnlnkimgR">
+        <div class="pdficnlnkcntR" style="">
+          <div id="pdficnlnk1R" class="pdficnlnkR">
+            <a class="border" href="GE1-Clothing.pdf">
+              <img src="graphics/unitcvr-clothing.png" class="pdficnlnkimgR">
+            </a>
           </div>
         </div>
-
       </section>
-<!-- Unit 2 -->
-      <div class="sechdr" id="sechdr2" style=""></div>
-      <p style="position: absolute; top: 240%;">Poverty &#38; Inequality</p>
-      <section id="sec2" style="top: 250%;">
 
+      <!-- Unit 2 -->
+      <div class="sechdr" id="sechdr2" style=""><p style="">Unit 3: Poverty &#38; Inequality</p></div>
+
+      <section id="sec2" style="">
         <div id="pdfcvr-cnt2" class="pdfcvr-cnt" style="" data-aos="fade-right">
             <div class="pdfcvr-rtdprt">
-              <a class="border" style="" href="GE1-Clothing.pdf">
                   <img src="graphics/unitcvr-poverty.png" class="pdfcvrimg" style="">
-              </a>
             </div>
         </div>
 
         <div class="unttxtcnt" data-aos="fade-left">
-              <h1 id="UntClothingTtle">Poverty &#38; Inequality</h1>
-
-              <h2 class="unttxtpnts" id="UntClothingQ1">- Where do our clothes come from?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ2">- Who makes our clothes?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ3">- What are the working conditions of clothing industry factory workers in bangladesh?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ4">- What is fast fashion?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ5">- How much clothing do we waste?</h2>
+              <h1 id="UntPovertyTtle">Unit 2: Poverty &#38; Inequality</h1>
+              <h2 class="unttxtpnts" id="UntPovertyQ1">- What do we know about poverty?</h2>
+    					<h2 class="unttxtpnts" id="UntPovertyQ2">- What causes poverty?</h2>
+    					<h2 class="unttxtpnts" id="UntPovertyQ3">- What is the poverty cycle?</h2>
+    					<h2 class="unttxtpnts" id="UntPovertyQ4">- How do we reduce poverty? How do we break the cycle?</h2>
+    					<h2 class="unttxtpnts" id="UntPovertyQ5">- Is the global population connected to poverty and sustainability?</h2>
+              <h2 class="unttxtpnts" id="UntPovertyQ6">- Which countries are poor? Who are the richest people on Earth?</h2>
+              <h2 class="unttxtpnts" id="UntPovertyQ7">- Will extreme poverty end?</h2>
         </div>
 
         <div class="pdficnlnkcnt">
           <div id="pdficnlnk2" class="pdficnlnk">
-            <img src="graphics/unitcvr-poverty.png" class="pdficnlnkimg">
+            <a class="border" style="" href="GE1-Clothing.pdf">
+              <img src="graphics/unitcvr-poverty.png" class="pdficnlnkimg">
+            </a>
           </div>
         </div>
-
       </section>
-<!-- Unit 3 -->
-<div class="sechdr" id="sechdr3" style=""></div>
-      <p style="position: absolute; top: 365%;">Music &#38; Diversity</p>
-      <section id="sec3" style="top: 375%;">
 
+      <!-- Unit 3 -->
+      <div class="sechdr" id="sechdr3" style=""><p style="">Unit 2: Music &#38; Diversity</p></div>
+
+      <section id="sec3" style="">
         <div id="pdfcvr-cnt3R" class="pdfcvr-cntR" style="" data-aos="fade-left">
             <div class="pdfcvr-rtdprtR">
-              <a class="border" style="" href="GE1-Clothing.pdf">
                   <img src="graphics/unitcvr-music.png" class="pdfcvrimg" style="">
-              </a>
             </div>
         </div>
 
         <div class="unttxtcntR" data-aos="fade-right">
-              <h1 id="UntClothingTtle">Music &#38; Diversity</h1>
-
-              <h2 class="unttxtpnts" id="UntClothingQ1">- Where do our clothes come from?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ2">- Who makes our clothes?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ3">- What are the working conditions of clothing industry factory workers in bangladesh?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ4">- What is fast fashion?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ5">- How much clothing do we waste?</h2>
+              <h1 id="UntMusicTtle">Music &#38; Diversity</h1>
+              <h2 class="unttxtpnts" id="UntMusicQ1">- What types of music are there??</h2>
+    					<h2 class="unttxtpnts" id="UntMusicQ2">- How do we categorize genre?</h2>
+    					<h2 class="unttxtpnts" id="UntMusicQ3">- What musical cultures represent us?</h2>
+    					<h2 class="unttxtpnts" id="UntMusicQ4">- What is diversity?</h2>
+    					<h2 class="unttxtpnts" id="UntMusicQ5">- How diverse are we?</h2>
         </div>
 
         <div class="pdficnlnkcntR">
           <div id="pdficnlnk3R" class="pdficnlnkR">
-            <img src="graphics/unitcvr-music.png" class="pdficnlnkimgR">
+            <a class="border" style="" href="GE1-Clothing.pdf">
+              <img src="graphics/unitcvr-music.png" class="pdficnlnkimgR">
+            </a>
           </div>
         </div>
-
       </section>
-<!-- Unit 4 -->
-<div class="sechdr" id="sechdr4" style=""></div>
-      <p style="position: absolute; top: 480%;">Food &#38; The Environment</p>
-      <section id="sec4" style="top: 500%;">
 
+      <!-- Unit 4 -->
+      <div class="sechdr" id="sechdr4" style=""><p style="">Unit 1: Food &#38; The Environment</p></div>
+
+      <section id="sec4" style="">
         <div id="pdfcvr-cnt4" class="pdfcvr-cnt" style="" data-aos="fade-right">
             <div class="pdfcvr-rtdprt">
-              <a class="border" style="" href="GE1-Clothing.pdf">
                   <img src="graphics/unitcvr-food.png" class="pdfcvrimg" style="">
-              </a>
             </div>
         </div>
 
         <div class="unttxtcnt" data-aos="fade-left">
-              <h1 id="UntClothingTtle">Food &#38; The Environment</h1>
-
-              <h2 class="unttxtpnts" id="UntClothingQ1">- Where do our clothes come from?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ2">- Who makes our clothes?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ3">- What are the working conditions of clothing industry factory workers in bangladesh?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ4">- What is fast fashion?</h2>
-    					<h2 class="unttxtpnts" id="UntClothingQ5">- How much clothing do we waste?</h2>
+              <h1 id="UntFoodTtle">Food &#38; The Environment</h1>
+              <h2 class="unttxtpnts" id="UntFoodQ1">- Where does our food come from?</h2>
+    					<h2 class="unttxtpnts" id="UntFoodQ2">- What is foreign food?</h2>
+    					<h2 class="unttxtpnts" id="UntFoodQ3">- What is the carbon footprint of food?</h2>
+    					<h2 class="unttxtpnts" id="UntFoodQ4">- How much food do we waste?</h2>
         </div>
 
         <div class="pdficnlnkcnt">
           <div id="pdficnlnk4" class="pdficnlnk">
-            <img src="graphics/unitcvr-food.png" class="pdficnlnkimg">
+            <a class="border" style="" href="GE1-Clothing.pdf">
+              <img src="graphics/unitcvr-food.png" class="pdficnlnkimg">
+            </a>
           </div>
         </div>
-
       </section>
 
       </div>
 
       <div id="webdevercnt">
-        <h3 id="webdever" style="float: right; margin-right: 10px; margin-top: 20%;">G.Perilli</h3>
-
+        <a href="https://gperilli.github.io/port/index.html"><h3 id="webdever" style="float: right; margin-right: 10px; margin-top: 20%;color: #0094a1; text-decoration: underline;">G.Perilli</h3></a>
       </div>
-
 
   </body>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-  AOS.init();
-
-  function glbxsz() {
-    //
-
-  }
-  </script>
+  <script src="knhsge1trans.js"></script>
+  <script>AOS.init();</script>
 
 
 </html>
